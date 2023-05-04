@@ -357,8 +357,13 @@ for line in data:
                 subgraph = add_node(subgraph, nodes[flow][0], nodes[flow][1])
             except KeyError:
                 pass
-print(potential_sensitive)
 
+
+
+with open("possible_sense_vars.txt", "w") as file1:
+# Writing data to a file
+    for var in potential_sensitive:
+        file1.write(var+"\n")
 
 # Now we construct the graph
 print("digraph {")
