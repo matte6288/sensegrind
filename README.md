@@ -38,15 +38,15 @@ Installation (from source)
 
 Compile with
 
-	../sensegrind$ gcc -O0 -g -o test test.c
+	~$ ../sensegrind$ gcc -O0 -g -o test test.c
 
 Run with
 
-	../sensegrind$ ../build/bin/valgrind --tool=taintgrind  --taint-stdin=yes test
+	~$ ../sensegrind$ ../build/bin/valgrind --tool=taintgrind  --taint-stdin=yes test
 
 or simply
 
-	../sensegrind$ ../build/bin/taintgrind --taint-stdin=yes test
+	~$ ../sensegrind$ ../build/bin/taintgrind --taint-stdin=yes test
 
 
 
@@ -59,15 +59,15 @@ You will need to save STDERR output from your taintgrind run to a file the easie
 
 You will also need to get all variable from the c file:
 
-python cparser.py -f test.c
+~$ python cparser.py -f test.c
 
 Then run logSenseParser.py to get dot file for visualization and retrieve potentially sensitive variables:
 
-python logSenseParser.py -v var_names.txt -l log.txt
+~$ python logSenseParser.py -v var_names.txt -l log.txt
 
 Most likely you will want to write doto output to file like this:
 
-python logSenseParser.py -v var_names.txt -l log.txt > test.dot
+~$ python logSenseParser.py -v var_names.txt -l log.txt > test.dot
 
 
 Visualise the graph with
