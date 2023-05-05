@@ -82,33 +82,3 @@ Or, for larger graphs
 
 
 
-
-Notes
------
-
-Taintgrind is based on [Valgrind](http://valgrind.org)'s MemCheck and [Flayer](http://code.google.com/p/flayer/).
-
-Taintgrind borrows the bit-precise shadow memory from MemCheck and only propagates explicit data flow. This means that Taintgrind will not propagate taint in control structures such as if-else, for-loops and while-loops. Taintgrind will also not propagate taint in dereferenced tainted pointers.
-For more information, see [Control-flow and Pointer tainting](https://github.com/wmkhoo/taintgrind/wiki/Control-flow-and-Pointer-tainting).
-
-Taintgrind has been used in [SOAAP](https://github.com/CTSRD-SOAAP/) and [Secretgrind](https://github.com/lmrs2/secretgrind).
-
-
-License
--------
-
-Taintgrind is licensed under GNU GPLv2.
-
-
-Thanks
-------
-Many of the improvements wouldn't be possible without help, feedback, bug reports, or patches from:
-
-```
-Khilan Gudka
-Laurent Simon
-Giuseppe Di Guglielmo
-Marc Heuse
-tkchia
-Marek Zmysłowski
-```
